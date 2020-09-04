@@ -1,6 +1,6 @@
 # Design a Page Application
 
-Put the files *page_design_form.html* and *display_page.php* on a web server. Make sure you can view the pages in a browser. Select a text colour and enter some heading text and submit the form. *display_page.php* should be displayed and use these values to build a simple HTML page.
+Open files *page_design_form.html* and *display_page.php*. Make sure you can view the pages in a browser. Select a text colour, enter some heading text, and submit the form. *display_page.php* should be using these values to build a simple HTML page.
 
 * Check this works and you understand what is happening.
 
@@ -10,7 +10,7 @@ Then try the following:-
 
 2. Add some validation.
     * Add some simple validation to determine whether or not the user has completed all the fields.
-    * Make sure the user has selects different colours for the background and the text
+    * Make sure the user has selected different colours for the background and the text.
 
 3. Make a 'postback' form
     * Modify your application to create a 'postback' form, where the PHP code and the HTML form are in a single file.
