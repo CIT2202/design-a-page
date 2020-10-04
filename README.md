@@ -12,5 +12,5 @@ Then try the following:-
     * Add some simple validation to determine whether or not the user has completed all the fields.
     * Make sure the user has selected different colours for the background and the text.
 
-3. Make a 'postback' form
+3. Submit the form to the same page
     * Modify your application to create a 'postback' form, where the PHP code and the HTML form are in a single file.
