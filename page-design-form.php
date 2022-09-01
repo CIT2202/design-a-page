@@ -1,45 +1,45 @@
 <?php
 
-$bg_colour="";
-$txt_colour="";
-$font="";
-$heading_txt="";
-$main_txt="";
-$err_msg="";
-$errors=false;
-$submitted=false;
+$bg_colour = "";
+$txt_colour = "";
+$font = "";
+$heading_txt = "";
+$main_txt = "";
+$err_msg = "";
+$errors = false;
+$submitted = false;
 if(isset($_POST['submit_btn'])){
-    $submitted=true;
+    $submitted = true;
     if(isset($_POST['bg_colour'])){
-	    $bg_colour=$_POST['bg_colour'];
+	    $bg_colour = $_POST['bg_colour'];
     }
     else{
-        $errors=true;
-        $err_msg.="<p>You need to choose a background colour</p>";
+        $errors = true;
+        $err_msg .= "<p>You need to choose a background colour</p>";
     }
     if(isset($_POST['txt_colour'])){
-	    $txt_colour=$_POST['txt_colour'];
+	    $txt_colour = $_POST['txt_colour'];
     }
     else{
         $errors=true;
-        $err_msg.="<p>You need to choose a text colour</p>";
+        $err_msg .= "<p>You need to choose a text colour</p>";
     }
     if(!empty($bg_colour) && !empty($txt_colour)){
-        if($bg_colour===$txt_colour){
-            $errors=true;
-            $err_msg.="<p>You can't choose the same colour for the text and background</p>";
+        if($bg_colour === $txt_colour){
+            $errors = true;
+            $err_msg .= "<p>You can't choose the same colour for the text and background</p>";
         }
     }
     $font=$_POST['font'];
-	  $heading_txt=trim($_POST['heading_txt']);
-	  $main_txt=trim($_POST['main_txt']);
+	  $heading_txt = trim($_POST['heading_txt']);
+	  $main_txt = trim($_POST['main_txt']);
     if(empty($heading_txt)){
-        $errors=true;
-        $err_msg.="<p>You need to enter some text for the heading</p>";
+        $errors = true;
+        $err_msg .= "<p>You need to enter some text for the heading</p>";
     }
     if(empty($main_txt)){
-        $errors=true;
-        $err_msg.="<p>You need to enter some main text</p>";
+        $errors = true;
+        $err_msg .= "<p>You need to enter some main text</p>";
     }
 }
 ?>
@@ -73,27 +73,27 @@ if(!$errors && $submitted){
 <h1>Design Your Own Webpage</h1>
 <fieldset>
 <legend>What colour background would you like?</legend>
-<label for="bg_red">Red</label><input <?php if($bg_colour=="red") echo "checked"; ?> id="bg_red" type="radio" name="bg_colour" value="red">
-<label for="bg_blue">Blue</label><input <?php if($bg_colour=="blue") echo "checked"; ?> id="bg_blue" type="radio" name="bg_colour" value="blue">
-<label for="bg_green">Green</label><input <?php if($bg_colour=="green") echo "checked"; ?> id="bg_green" type="radio" name="bg_colour" value="green">
-<label for="bg_yellow">Yellow</label><input <?php if($bg_colour=="yellow") echo "checked"; ?> id="bg_yellow" type="radio" name="bg_colour" value="yellow">
+<label for="bg_red">Red</label><input <?php if($bg_colour === "red") echo "checked"; ?> id="bg_red" type="radio" name="bg_colour" value="red">
+<label for="bg_blue">Blue</label><input <?php if($bg_colour === "blue") echo "checked"; ?> id="bg_blue" type="radio" name="bg_colour" value="blue">
+<label for="bg_green">Green</label><input <?php if($bg_colour === "green") echo "checked"; ?> id="bg_green" type="radio" name="bg_colour" value="green">
+<label for="bg_yellow">Yellow</label><input <?php if($bg_colour === "yellow") echo "checked"; ?> id="bg_yellow" type="radio" name="bg_colour" value="yellow">
 </fieldset>
 
 <fieldset>
 <legend>What colour text would you like?</legend>
-<label for="txt_red">Red<input <?php if($txt_colour=="red") echo "checked"; ?> id="txt_red" type="radio" name="txt_colour" value="red">
-<label for="txt_blue">Blue<input <?php if($txt_colour=="blue") echo "checked"; ?> id="txt_red" type="radio" name="txt_colour" value="blue">
-<label for="txt_green">Green<input <?php if($txt_colour=="green") echo "checked"; ?> id="txt_red" type="radio" name="txt_colour" value="green">
-<label for="txt_yellow">Yellow<input <?php if($txt_colour=="yellow") echo "checked"; ?> id="txt_red" type="radio" name="txt_colour" value="yellow">
+<label for="txt_red">Red<input <?php if($txt_colour ==="red") echo "checked"; ?> id="txt_red" type="radio" name="txt_colour" value="red">
+<label for="txt_blue">Blue<input <?php if($txt_colour === "blue") echo "checked"; ?> id="txt_red" type="radio" name="txt_colour" value="blue">
+<label for="txt_green">Green<input <?php if($txt_colour === "green") echo "checked"; ?> id="txt_red" type="radio" name="txt_colour" value="green">
+<label for="txt_yellow">Yellow<input <?php if($txt_colour === "yellow") echo "checked"; ?> id="txt_red" type="radio" name="txt_colour" value="yellow">
 </fieldset>
 
 <fieldset>
 <label for="font">Choose a font</label>
 <select id="font" name="font">
-<option <?php if($font=="Arial") echo "selected"; ?> value="Arial">Arial</option>
-<option <?php if($font=="Verdana") echo "selected"; ?> value="Arial">Verdana</option>
-<option <?php if($font=="Courier") echo "selected"; ?> value="Courier">Courier</option>
-<option <?php if($font=="Comic Sans MS") echo "selected"; ?> value="Comic Sans MS">Comic Sans</option>
+<option <?php if($font === "Arial") echo "selected"; ?> value="Arial">Arial</option>
+<option <?php if($font === "Verdana") echo "selected"; ?> value="Arial">Verdana</option>
+<option <?php if($font === "Courier") echo "selected"; ?> value="Courier">Courier</option>
+<option <?php if($font === "Comic Sans MS") echo "selected"; ?> value="Comic Sans MS">Comic Sans</option>
 </select>
 </fieldset>
 <div>
