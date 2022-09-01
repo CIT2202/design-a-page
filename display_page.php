@@ -1,6 +1,6 @@
 <?php
-$txt_colour=$_POST['txt_colour'];
-$heading_txt=$_POST['heading_txt'];
+$txt_colour = $_POST['txt_colour'];
+$heading_txt = $_POST['heading_txt'];
 ?>
 
 
